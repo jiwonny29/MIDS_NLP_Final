@@ -40,7 +40,7 @@ Accurate sentiment analysis is essential in consumer-driven markets. This projec
 ### Results
 
 - Real Data Accuracy: BoW - 65.57%, TF-IDF - 66.07%
-- Synthetic Data Accuracy: BoW - 53.41%, TF-IDF - 53.9%
+- Synthetic Data Accuracy: BoW - 96.62%, TF-IDF - 97.16%
 - Challenges highlighted through misclassification analysis.
 
 ## Discriminative Neural Network
