@@ -24,6 +24,27 @@ Accurate sentiment analysis is essential in consumer-driven markets. This projec
 - **Real-world dataset:** Curated from Kaggle, refined to 92,100 reviews.
 - **Synthetic dataset:** Created for unbiased testing.
 
+## Python Packages Required
+
+1. `random`
+2. `numpy`
+3. `sklearn` (Scikit-Learn)
+   - `feature_extraction.text` module
+   - `naive_bayes` module
+   - `model_selection` module
+4. `pandas`
+5. `nltk` (Natural Language Toolkit)
+   - `corpus.wordnet` module
+6. `tensorflow`
+   - `keras.models` module
+   - `keras.layers` module
+   - `keras.preprocessing.text` module
+   - `keras.preprocessing.sequence` module
+7. `re` (Regular Expressions)
+8. `psutil`
+9. `matplotlib.pyplot`
+10. `seaborn`
+
 ## Generative Language Model
 
 ### Model Selection
