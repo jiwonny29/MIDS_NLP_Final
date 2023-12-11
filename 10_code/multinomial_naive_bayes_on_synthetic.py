@@ -2,13 +2,21 @@ import pandas as pd
 import re
 import time
 import psutil
+import matplotlib.pyplot as plt
+import seaborn as sns
 from sklearn.feature_extraction.text import CountVectorizer, TfidfVectorizer
 from sklearn.model_selection import train_test_split, GridSearchCV
 from sklearn.naive_bayes import MultinomialNB
-from sklearn.metrics import accuracy_score, precision_score, recall_score, f1_score
+from sklearn.metrics import (
+    accuracy_score,
+    precision_score,
+    recall_score,
+    f1_score,
+    confusion_matrix,
+)
 
 # Load the data
-data = pd.read_csv("C:/Users/wonny/Downloads/nlp/balanced_data.csv")
+data = pd.read_csv("C:/Users/wonny/Downloads/nlp/synthetic_data_nltk.csv")
 data.info()
 
 
@@ -22,11 +30,11 @@ def data_processing(text):
 
 
 # Apply data processing to the 'review' column
-data["review"] = data["review"].apply(data_processing)
+data["text"] = data["text"].apply(data_processing)
 
 # Split data into features and labels
-X = data["review"]
-y = data["sentiment"]
+X = data["text"]
+y = data["label"]
 
 # Split data into training and testing sets
 X_train, X_test, y_train, y_test = train_test_split(
@@ -165,19 +173,6 @@ print(
 )
 
 
-import matplotlib.pyplot as plt
-import seaborn as sns
-from sklearn.metrics import confusion_matrix
-
-# Predict labels on the test set for BoW and TF-IDF
-y_pred_count_new = grid_search_count.best_estimator_.predict(X_test_counts)
-y_pred_tfidf_new = grid_search_tfidf.best_estimator_.predict(X_test_tfidf)
-
-# Calculate confusion matrices for BoW and TF-IDF
-confusion_matrix_count = confusion_matrix(y_test, y_pred_count_new)
-confusion_matrix_tfidf = confusion_matrix(y_test, y_pred_tfidf_new)
-
-
 # Function to plot two confusion matrices side by side
 def plot_confusion_matrices(cm1, cm2, title1, title2, labels):
     fig, (ax1, ax2) = plt.subplots(
@@ -220,6 +215,10 @@ def plot_confusion_matrices(cm1, cm2, title1, title2, labels):
 
 # Labels for the axes
 class_labels = [-1, 0, 1]
+
+# Calculate confusion matrices for Count Vectorizer and TF-IDF Vectorizer
+confusion_matrix_count = confusion_matrix(y_test, y_pred_count)
+confusion_matrix_tfidf = confusion_matrix(y_test, y_pred_tfidf)
 
 # Plot the confusion matrices side by side
 plot_confusion_matrices(
