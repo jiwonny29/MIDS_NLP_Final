@@ -1,10 +1,6 @@
 # Natural Language Processing - Final Project
 ## Sentiment Analysis Models for Online Product Reviews
 
-<div align="center">
-  <img src="assets/sentiment-analysis.jpg" alt="Sentiment Analysis Models" width="500">
-</div>
-
 ## Overview
 
 This repository conducts an in-depth exploration and comparison of sentiment analysis models tailored for online product reviews. We evaluate the effectiveness of two models – a Generative Language Model (Multinomial Naive Bayes) and a Discriminative Neural Network (Bidirectional LSTM) – aiming to provide actionable insights for sentiment classification in the realm of e-commerce.
