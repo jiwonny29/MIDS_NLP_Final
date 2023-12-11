@@ -1,28 +1,28 @@
 # Natural Language Processing - Final Project
-## Sentiment Analysis Models for Online Product Reviews
+# Sentiment Analysis Models for Online Product Reviews
 
 ## Overview
 
-This repository conducts an in-depth exploration and comparison of sentiment analysis models tailored for online product reviews. We evaluate the effectiveness of two models – a Generative Language Model (Multinomial Naive Bayes) and a Discriminative Neural Network (Bidirectional LSTM) – aiming to provide actionable insights for sentiment classification in the realm of e-commerce.
+This repository presents a comprehensive exploration of sentiment analysis models tailored for online product reviews. We meticulously compare a Generative Language Model (Multinomial Naive Bayes) and a Discriminative Neural Network (Bidirectional LSTM) to provide practical insights for sentiment classification in the dynamic e-commerce landscape.
 
 ## Authors
 
-- **Afraa Noureen**
-- **Ayush Gupta**
-- **Jiwon Shin**
+- Afraa Noureen
+- Ayush Gupta
+- Jiwon Shin
 
 ## Abstract
 
-Our objective is to empower businesses with a robust sentiment analysis framework by dissecting real-world and synthetic datasets. This comparison spans various metrics, emphasizing the balance between accuracy, computational efficiency, and interpretability.
+Our mission is to empower businesses with a robust sentiment analysis framework. We conduct a thorough analysis of real-world and synthetic datasets, focusing on accuracy, computational efficiency, and interpretability.
 
 ## Background
 
-In a world driven by consumer feedback, accurate sentiment analysis is paramount for businesses. Our study delves into online product reviews from Amazon and eBay, offering valuable insights to enhance customer experience and streamline analysis efforts.
+Accurate sentiment analysis is paramount in consumer-driven markets. This study delves into product reviews from Amazon and eBay, providing valuable insights to enhance customer experience.
 
 ## Dataset
 
-- Real-world dataset: Curated from Kaggle, refined to 92,100 reviews.
-- Synthetic dataset: Created for unbiased testing, mirroring real-world scenarios.
+- **Real-world dataset:** Curated from Kaggle, refined to 92,100 reviews.
+- **Synthetic dataset:** Created for unbiased testing.
 
 ## Generative Language Model
 
@@ -34,8 +34,8 @@ In a world driven by consumer feedback, accurate sentiment analysis is paramount
 ### Implementation Highlights
 
 - Text vectorization using CountVectorizer and TF-IDF Vectorizer.
-- Vocabulary limited to 7,000 words for optimal accuracy.
-- Hyperparameter tuning via Grid Search for precise sentiment analysis.
+- Vocabulary limited to 7,000 words.
+- Hyperparameter tuning via Grid Search.
 
 ### Results
 
@@ -47,14 +47,13 @@ In a world driven by consumer feedback, accurate sentiment analysis is paramount
 
 ### Model Selection
 
-- **Architecture:** Bidirectional Long Short-Term Memory (BiLSTM)
+- **Architecture:** Bidirectional LSTM
 
 ### Implementation Highlights
 
 - Embedding layer for word transformation.
-- Bidirectional layers to capture context.
+- Bidirectional layers for context.
 - Dropout layers for overfitting prevention.
-- Efficient computational considerations for training.
 
 ### Results
 
@@ -62,33 +61,22 @@ In a world driven by consumer feedback, accurate sentiment analysis is paramount
 - Synthetic Data Accuracy: 98.00%
 - Acknowledgment of challenges with uncommon words and ambiguous context.
 
-## Limitations
-
-### Generative Language Model
-
-- Loss of contextual information.
-- Struggles with negations, modifiers, and polysemy.
-- Fixed vocabulary constraints.
-
-### Discriminative Neural Network
-
-- Computational resource demands.
-- Reliance on training data quality.
-- Sensitivity to noisy data.
-- Hardware acceleration considerations.
-
 ## Conclusion
 
-Our study illuminates strengths and limitations, offering businesses informed choices for sentiment analysis in the dynamic landscape of online product reviews.
+**Generative Language Model (Multinomial Naive Bayes):**
+- Strengths: Interpretability, simplicity.
+- Weaknesses: Loss of contextual information, struggles with negations and modifiers, fixed vocabulary.
 
-<div align="center">
-  <img src="assets/conclusion.jpg" alt="Conclusion" width="600">
-</div>
+**Discriminative Neural Network (Bidirectional LSTM):**
+- Strengths: High accuracy, adaptability to complex structures.
+- Weaknesses: Computational demands, challenges with uncommon words.
+
+These findings guide businesses in choosing models aligned with their priorities.
 
 ## Recommendations
 
-1. **Model Selection:** Align with the nature of your data and prioritize interpretability or accuracy.
-2. **Hyperparameter Tuning:** Fine-tune based on dataset characteristics for optimal performance.
-3. **Context-Aware Approaches:** Implement nuanced approaches for sentiment analysis, especially in complex reviews.
+1. **Model Selection:** Align with your data and prioritize interpretability or accuracy.
+2. **Hyperparameter Tuning:** Fine-tune based on dataset characteristics.
+3. **Context-Aware Approaches:** Implement nuanced approaches, especially in complex reviews.
 
-These insights guide businesses in deploying effective sentiment analysis models, fostering a deeper understanding of customer sentiments.
+These insights assist businesses in deploying effective sentiment analysis models, fostering a deeper understanding of customer sentiments.
