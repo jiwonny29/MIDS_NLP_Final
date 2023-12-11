@@ -89,7 +89,7 @@ Accurate sentiment analysis is essential in consumer-driven markets. This projec
 - Weaknesses: Loss of contextual information, struggles with negations and modifiers, fixed vocabulary.
 
 **Discriminative Neural Network (Bidirectional LSTM):**
-- Strengths: High accuracy, adaptability to complex structures.
+- Strengths: Higher accuracy, adaptability to complex structures.
 - Weaknesses: Computational demands, challenges with uncommon words.
 
 These findings guide businesses in choosing models aligned with their priorities.
